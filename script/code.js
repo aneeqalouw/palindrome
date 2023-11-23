@@ -3,10 +3,11 @@ let output = document.querySelector('[data-output]')
 
 function palindrome (){
     let word = document.querySelector('[data-input]').value 
-    let wordarr = word.split('')
+    let downcase = word.toLowerCase()
+    let wordarr = downcase.split('')
     let arrrev= wordarr.reverse()
     let backwards = arrrev.join('')
-    if (word == backwards){
+    if (downcase == backwards){
         output.innerHTML = word+ ' is a palindrome'
     }else {
         output.innerHTML = word + ' is not a palindrome'
